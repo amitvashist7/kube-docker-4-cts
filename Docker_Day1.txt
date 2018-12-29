@@ -1,0 +1,93 @@
+    1  cat /etc/*-release 
+    2  git clone https://github.com/amitvashist7/kube-docker-4-cts.git
+    3  ls
+    4  cd kube-docker-4-cts/
+    5  ls
+    6  cd setup/
+    7  ls
+    8  ls -ltr 
+    9  vim install-node.sh 
+   10  cat install-node.sh 
+   11  ls
+   12  chmod +x install-node.sh 
+   13  ./install-node.sh 
+   14  history 
+   15  docker version 
+   16  docker images 
+   17  docker run centos echo "Welcome to the world of Docker."
+   18  docker run centos echo "Test-2"
+   19  docker images 
+   20  docker run centos echo "Test-2"
+   21  docker run centos echo "Test-3"
+   22  docker run centos echo "Test-4"
+   23  docker ps 
+   24  docker ps -a
+   25  history 
+   26  docker images 
+   27  docker run ubuntu echo "Hello World"
+   28  docker images 
+   29  docker run ubuntu echo "ps -ef"
+   30  docker run ubuntu 'ps -ef'
+   31  docker run ubuntu ps 
+   32  docker push amitvashist7/docker-demo:v1
+   33  docker pull amitvashist7/docker-demo:v1
+   34  docker images 
+   35  docker pull amitvashist7/apache-ex4
+   36  docker login 
+   37  docker pull amitvashist7/apache-ex4
+   38  docker images 
+   39  ls
+   40  docker pull amitvashist7/k8s-tiny-web
+   41  docker pull amitvashist7/k8s-tiny-web:2
+   42  docker images 
+   43  docker pull busybox
+   44  docker images 
+   45  docker pull reg.docker.cts.com:9000/amitvashist7/k8s-tiny-web:2
+   46  ls
+   47  docker images 
+   48  docker rm amitvashist7/k8s-tiny-web:2
+   49  docker rmi amitvashist7/k8s-tiny-web:2
+   50  docker images 
+   51  docker search busybox
+   52  ls
+   53  docker images 
+   54  uname -a 
+   55  docker run -it centos
+   56  docker ps 
+   57  docker ps -a
+   58  docker ps 
+   59  docker ps -a
+   60  docker run -it centos
+   61  docker ps 
+   62  docker ps -a
+   63  docker ps 
+   64  docker attach 6ba4e58201b4
+   65  docker run -itd --name job1 centos
+   66  docker run -itd --name job2 centos
+   67  docker run -itd --name job3 centos
+   68  docker run -itd --name job4 centos
+   69  docker ps 
+   70  docker attach job3
+   71  docker ps 
+   72  docker ps -a
+   73  docker ps 
+   74  docker start job3
+   75  docker ps 
+   76  docker attach job3
+   77  docker ps 
+   78  docker start job3
+   79  docker attach job3
+   80  ls
+   81  docker ps 
+   82  docker ps -a
+   83  docker ps -aq
+   84  docker kill $(docker ps -aq)
+   85  docker rm $(docker ps -aq)
+   86  docker ps -a 
+   87  docker ps a
+   88  docker ps 
+   89  history 
+   90  ls
+   91  cd ..
+   92  ls
+   93  history > Docker_Day1.txt
