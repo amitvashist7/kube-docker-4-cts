@@ -91,3 +91,58 @@
    91  cd ..
    92  ls
    93  history > Docker_Day1.txt
+   94  git add . 
+   95  git commit -m "Docker_Day1.txt"
+   96  git push 
+   97  ls
+   98  docker ps 
+   99  docker run -itd centos 
+  100  docker ps 
+  101  docker inspect b60b1e6b8a57
+  102  docker run -it centos  
+  103  ls
+  104  docker ps 
+  105  curl localhist
+  106  curl localhost
+  107  docker inspect 1bf87519ea9e
+  108  curl 172.17.0.3
+  109  docker attach 1bf87519ea9e
+  110  curl 172.17.0.3
+  111  docker ps 
+  112  curl 172.17.0.3
+  113  docker version 
+  114  ls
+  115  docker ps -a 
+  116  docker kill $(docker ps -qa)
+  117  docker start 1bf87519ea9e b60b1e6b8a57
+  118  docker attach 1bf87519ea9e
+  119  docker ps 
+  120  docker commit -p -m "My Inital CentOS Web Cont." 1bf87519ea9e amitvashist7/cts-centos-web:v1
+  121  docker images 
+  122  docker push amitvashist7/cts-centos-web:v1
+  123  docker images 
+  124  docker image 
+  125  docker images 
+  126  docker images | awk -F" " '{print $3}'
+  127  docker rmi $(docker images | awk -F" " '{print $3}')
+  128  docker ps -a 
+  129  docker kill $(docker ps -aq)
+  130  docker rmi $(docker images | awk -F" " '{print $3}')
+  131  docker images 
+  132  docker rmi centos
+  133  docker rmi centos --force 
+  134  docker rmi centos
+  135  docker images 
+  136  docker ps -a 
+  137  docker rm $(docker ps -aq)
+  138  docker ps -a 
+  139  docker images 
+  140  docker ps 
+  141  docker ps -a
+  142  docker run -itd amitvashist7/cts-centos-web:v1
+  143  docker ps -a 
+  144  docker inspect ad1385f201a1
+  145  curl 172.17.0.2
+  146  history 
+  147  ls
+  148  history > Docker_Day1.txt 
