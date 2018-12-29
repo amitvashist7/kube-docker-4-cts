@@ -146,3 +146,25 @@
   146  history 
   147  ls
   148  history > Docker_Day1.txt 
+  149  git add . 
+  150  git commit -m "Docker_Day1.txt"
+  151  git push 
+  152  git images 
+  153  docker images 
+  154  ls
+  155  docker ps -a
+  156  docker run -it amitvashist7/cts-centos-web:v1 /bin/bash
+  157  docker ps 
+  158  docker commit -p -m "My Updated CentOS Web Cont." d316215c6954 amitvashist7/cts-centos-web:v2
+  159  docker images 
+  160  docker push amitvashist7/cts-centos-web:v2
+  161  ls
+  162  docker kill $(docker ps -aq)
+  163  ls
+  164  docker run -itd amitvashist7/cts-centos-web:v2
+  165  curl 172.17.0.2
+  166  docker run -itd amitvashist7/cts-centos-web:v1
+  167  curl 172.17.0.3
+  168  docker images 
+  169  history 
+  170  history > Docker_Day1.txt
