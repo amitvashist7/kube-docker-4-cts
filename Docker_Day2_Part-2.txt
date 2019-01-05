@@ -252,3 +252,70 @@
   252  ls
   253  history > Docker_Day2
   254  history > Docker_Day2_Part-2.txt 
+  255  ls
+  256  rm -rf Docker_Day2
+  257  git add . 
+  258  git commit -m "Docker Volumes History"
+  259  git push 
+  260  systemctl status docker.service
+  261  tail -f /var/log/kern.log 
+  262  tail -f /var/log/lxd/
+  263  docker ps 
+  264  docker logs bcce3e6942c3
+  265  ls
+  266  docker network ls 
+  267  docker network inspect f9918392fa1e
+  268  ip addr 
+  269  docker kill $(docker ps -aq)
+  270  docker rm $(docker ps -aq)
+  271  ip addr 
+  272  docker network inspect f9918392fa1e
+  273  docker images 
+  274  docker run --name test01 -d amitvashist7/friendlyhello:v3
+  275  docker ps 
+  276  docker network inspect f9918392fa1e
+  277  curl 172.17.0.2
+  278  curl 172.17.0.2:8080
+  279  ip addr 
+  280  docker
+  281  curl 172.17.0.2:8080
+  282  curl localhost:8080
+  283  ip addr 
+  284  curl localhost:8080
+  285  docker run --name test02 -d -p 9090:8080 amitvashist7/friendlyhello:v3
+  286  docker ps 
+  287  curl localhost:8080
+  288  curl localhost:9090
+  289  ls
+  290  docker run --name test03 -d -p 9090:8080 amitvashist7/friendlyhello:v3
+  291  docker run --name test04 -d -p 9091:8080 amitvashist7/friendlyhello:v3
+  292  docker run --name test05 -d -p 9092:8080 amitvashist7/friendlyhello:v3
+  293  docker run --name test06 -d -p 9093:8080 amitvashist7/friendlyhello:v3
+  294  docker ps 
+  295  netstat -tulnp
+  296  docker ps 
+  297  docker kill test02
+  298  netstat -tulnp
+  299  docker run --name test07 -d -p 9090:8080 amitvashist7/friendlyhello:v3
+  300  netstat -tulnp
+  301  docker run --name test08 -d -p 8080:8080 amitvashist7/friendlyhello:v3
+  302  netstat -tulnp
+  303  docker ps 
+  304  docker network ls 
+  305  docker network inspect f9918392fa1e
+  306  docker network ls 
+  307  docker network create --driver=bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 mybr0
+  308  docker network ls 
+  309  docker network inspect mybr0
+  310  docker run --name test09 -d  --network "mybr0" -p 32000:8080 amitvashist7/friendlyhello:v3
+  311  docker ps  
+  312  docker inspect test09
+  313  docker run --name test10 -d  --network "mybr0" -p 32001:8080 amitvashist7/friendlyhello:v3
+  314  docker inspect test10
+  315  docker inspect test09
+  316  docker network ls 
+  317  docker network inspect mybr0
+  318  curl localhost:32000
+  319  curl localhost:32001
+  320  ls
+  321  history > Docker_Day2_Part-2.txt 

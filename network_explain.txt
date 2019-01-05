@@ -1,0 +1,33 @@
+
+
+Web ->  172.31.0.12 -> Virtualbox 
+                      -> worker01 ( 172.31.0.11 )
+					  -> worker02 ( 172.31.0.12 ) -> Webserver 80. 
+					  -> worker03 ( 172.31.0.13 )
+					  
+
+Web ->  172.31.0.12 -> Virtualbox 
+                      -> worker01 ( 172.31.0.11 )
+					  -> worker02 ( 172.31.0.12 ):9090 -> Cont4:8080   -> Docker - brg0 ( 172.17.0.1 )
+					  -> worker03 ( 172.31.0.13 )		   	   				Docker - cont1 ( 172.17.0.2 :8080 )			  
+																			Docker - cont2 ( 172.17.0.3 )		
+																			Docker - cont3 ( 172.17.0.5 )		
+																			Docker - cont4 ( 172.17.0.7 :8080) -> 9090:0.0.0.0
+																
+																			curl localhost -< No Response
+																			curl 172.17.0.2:8080 -< Response
+																			curl localhost:9090 -< Response
+																
+Web ->  172.31.0.12:9090 -> Virtualbox 
+                      -> worker01 ( 172.31.0.11 )
+					  -> worker02 ( 172.31.0.12 ):9090 -> Cont4:8080   -> Docker - brg0 ( 172.17.0.1 )
+					  -> worker03 ( 172.31.0.13 )		   	   				Docker - cont1 ( 172.17.0.2 :8080 )			  
+																			Docker - cont2 ( 172.17.0.3 )		
+																			Docker - cont3 ( 172.17.0.5 )		
+																			Docker - cont4 ( 172.17.0.7 :8080) -> 9090:0.0.0.0
+																
+																			curl localhost -< No Response
+																			curl 172.17.0.2:8080 -< Response
+																			curl localhost:9090 -< Response
+																
+																																
