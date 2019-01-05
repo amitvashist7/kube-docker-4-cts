@@ -319,3 +319,93 @@
   319  curl localhost:32001
   320  ls
   321  history > Docker_Day2_Part-2.txt 
+  322  git add .
+  323  ls
+  324  vim network_explain.txt
+  325  git add .
+  326  git commit -m "Docker Network"
+  327  git push 
+  328  ls
+  329  cd
+  330  ls
+  331  docker ps 
+  332  docker run --name testlog -d busybox sh -c "while true;do $(echo date); sleep 1;done"
+  333  docker ps 
+  334  docker logs testlog
+  335  docker logs -f testlog
+  336  docker logs -f --until=2s testlog
+  337  docker logs -f --until=1m testlog
+  338  ls
+  339  docker events 
+  340  docker events --since '20m'
+  341  docker events --since '2019-01-05'
+  342  docker events --since '2018-12-20' --until='2019-01-05'
+  343  docker events --since '2018-12-20T00:35:30' --until='2019-01-05T00:36.05'
+  344  docker events --since '2018-12-20T00:35:30' --until='2019-01-05T00:36:05'
+  345  date
+  346  docker events --since '2018-12-20T00:35:30' --until='2019-01-05T11:20:05'
+  347  docker events --filter 'event=stop'
+  348  docker events --filter 'event=start'
+  349  docker events --filter 'container=test'
+  350  docker events --filter 'container=test*'
+  351  curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  352  chmod +x /usr/local/bin/docker-compose
+  353  docker-compose --version
+  354  ls
+  355  cd kube-docker-4-cts/
+  356  ls
+  357  cd docker/
+  358  ls
+  359  mkdir docker-compose
+  360  ls
+  361  cd docker-compose/
+  362  ls
+  363  mkdir -p nginx db-data logs/nginx wordpress
+  364  ls
+  365  vim nginx/wordpress.conf
+  366  ls
+  367  vim docker-compose.yml
+  368  ls
+  369  cat docker-compose.yml 
+  370  ls
+  371  docker-compose up -d
+  372  vim docker-compose.yml 
+  373  docker-compose up -d
+  374  docker-compose ps 
+  375  ls
+  376  docker-compose ps 
+  377  docker run -it mysql /bin/bash
+  378  docker images 
+  379  docker run -it mariadb /bin/bash
+  380  cat docker-compose.yml 
+  381  docker run -it mariadb /bin/bash
+  382  l
+  383  lls
+  384  Cls
+  385  ls
+  386  vim nginx/wordpress.conf 
+  387  docker-compose up -d
+  388  ls
+  389  vim docker-compose.yml 
+  390  docker-compose up -d
+  391  docker-compose ps
+  392  ls
+  393  cd ..
+  394  ls
+  395  cd ..
+  396  ls
+  397  l
+  398  cd ..
+  399  ls
+  400  cd kube-docker-4-cts/
+  401  ls
+  402  cd docker/docker-compose/
+  403  lls
+  404  ls
+  405  cat docker-compose.yml 
+  406  cd ..
+  407  ls
+  408  cd ..
+  409  ls
+  410  git add .
+  411  history > Docker_Day2_Part-2.txt 
