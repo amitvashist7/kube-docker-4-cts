@@ -12,6 +12,9 @@ RUN apt-get update -y
 # Install the Apache2 Packages
 RUN apt-get install apache2 -y
 
+# Copy the index.html File.
+COPY index.html /var/www/html/ 
+
 # Service will expose / listening on below mentined Port No. 
 EXPOSE 80
 
