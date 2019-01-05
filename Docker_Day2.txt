@@ -1,0 +1,34 @@
+ 245  mkdir apache
+  246  ls
+  247  cd apache/
+  248  ls
+  249  vim Dockerfile
+  250  ls
+  251  history
+  252  docker build -t "amitvashist7/cts-ubuntu-web:v1" .
+  253  docker images
+  254  docker run -d amitvashist7/cts-ubuntu-web:v1
+  255  docker ps
+  256  docker inspect 8ed634331b37 | grep -i addr
+  257  cat 172.17.0.2
+  258  curl 172.17.0.2
+  259  ls
+  260  docker ps
+  261  ls
+  262  mv Dockerfile my-apache-v2
+  263  ls
+  264  vim my-apache-v2
+  265  docker build -t "amitvashist7/cts-ubuntu-web:v1" .
+  266  ls
+  267  docker build -t "amitvashist7/cts-ubuntu-web:v2" -f my-apache-v2 .
+  268  docker images
+  269  docker run -d amitvashist7/cts-ubuntu-web:v2
+  270  docker ps
+  271  curl 172.17.0.3
+  272  ls
+  273  cd ..
+  274  ls
+  275  cd ..
+  276  ls
+  277  git add .
+  278  git commit -m "Docker Image Example 1"
