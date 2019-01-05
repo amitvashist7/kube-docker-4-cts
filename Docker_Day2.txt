@@ -32,3 +32,125 @@
   276  ls
   277  git add .
   278  git commit -m "Docker Image Example 1"
+    1  ls
+    2  cd docker/
+    3  ls
+    4  cd apache/
+    5  ls
+    6  docker ps 
+    7  docker images 
+    8* docker run -itd amitvashist7/cts-centos-web:v2 
+    9  docker ps 
+   10  docker inspect b034b077dc10
+   11  curl "172.17.0.4"
+   12  curl 172.17.0.4
+   13  docker ps 
+   14  curl 172.17.0.4
+   15  docker attach b034b077dc10
+   16  curl 172.17.0.4
+   17  curl 172.17.0.4 >> index.html
+   18  cat index.html 
+   19  ls
+   20  vim index.html 
+   21  ls
+   22  vim my-apache-v2 
+   23  grep -i build ../../Docker_Day2.txt 
+   24  ls
+   25  cp -rf my-apache-v2 my-apache-v3
+   26  vim my-apache-v2 
+   27  grep -i build ../../Docker_Day2.txt 
+   28  docker build -t "amitvashist7/cts-ubuntu-web:v3" -f my-apache-v3 .
+   29  docker images 
+   30  docker run -d amitvashist7/cts-ubuntu-web:v3
+   31  docker inspect bed43b77d9f5
+   32  curl 172.17.0.5
+   33  curl 172.17.0.4
+   34  curl 172.17.0.3
+   35  curl 172.17.0.5
+   36  ls
+   37  vim index.html 
+   38  docker build -t "amitvashist7/cts-ubuntu-web:v4" -f my-apache-v3 .
+   39  docker run -d amitvashist7/cts-ubuntu-web:v4
+   40  curl 172.17.0.6
+   41  vim index.html 
+   42  docker build -t "amitvashist7/cts-ubuntu-web:v5" -f my-apache-v3 .
+   43  docker run -d amitvashist7/cts-ubuntu-web:v5
+   44  curl 172.17.0.7
+   45  ls
+   46  cd ..
+   47  ls
+   48  cd ..
+   49  ls
+   50  cd kube-docker-4-cts/
+   51  ls
+   52  git add . 
+   53  git commit "Docker Example v2"
+   54  git commit -m "Docker Example v2"
+   55  git push
+   56  ls
+   57  cd ..
+   58  ls
+   59  cd kube-docker-4-cts/
+   60  s
+   61  ls
+   62  cd docker/
+   63  ls
+   64  mkdir python
+   65  ls
+   66  cd python/
+   67  ls
+   68  vim Dockerfile
+   69  ls
+   70  vim app.py
+   71  ls
+   72  vim requirements.txt
+   73  ls
+   74  docker build -t "amitvashist7/friendlyhello" .
+   75  docker images 
+   76  docker run -d amitvashist7/friendlyhello
+   77  ls
+   78  docker ps 
+   79  docker inspect 4283fa49fff2
+   80  curl "172.17.0.8"
+   81  docker run -d amitvashist7/friendlyhello
+   82  curl "172.17.0.9"
+   83  curl "172.17.0.8"
+   84  ls
+   85  cd ..
+   86  ls
+   87  cd ../
+   88  ls
+   89  git add . 
+   90  git commit -m "Dockefile Example 2"
+   91  git push
+   92  ls
+   93  cd docker/
+   94  ls
+   95  cd python/
+   96  ls
+   97  vim app.py 
+   98  ls
+   99  vim Dockerfile 
+  100  docker build -t "amitvashist7/friendlyhello:v2" .
+  101  docker image
+  102  docker images 
+  103  docker run -d amitvashist7/friendlyhello:v2
+  104  docker ps 
+  105  docker inspect 25b06e8ea78b
+  106  curl 172.17.0.10
+  107  curl 172.17.0.10:8080
+  108  ls
+  109  vim Dockerfile 
+  110  docker build -t "amitvashist7/friendlyhello:v3" .
+  111  docker run -d amitvashist7/friendlyhello:v3
+  112  docker ps 
+  113  ls
+  114  cd ..
+  115  ls
+  116  docker version 
+  117  apt-get  update docker-ce
+  118  ls
+  119  git add . 
+  120  git commit -m "DockerFile Example2 : Update2"
+  121  git push
+  122  history  >>  ../Docker_Day2.txt 
