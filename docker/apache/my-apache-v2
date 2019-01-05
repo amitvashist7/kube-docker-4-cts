@@ -1,0 +1,19 @@
+# Base Image
+FROM  ubuntu:16.04
+
+# Owner of this Image
+MAINTAINER Amit Vashist <amitvashist7@gmail.com>
+
+# Let Setup Apache Server with following instructions.
+
+# Update the APT-GET Repo.
+RUN apt-get update -y 
+
+# Install the Apache2 Packages
+RUN apt-get install apache2 -y 
+
+# Service will expose / listening on below mentined Port No. 
+EXPOSE 80
+
+# Launch the Apache Service.
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND" ]
