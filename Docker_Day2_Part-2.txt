@@ -177,3 +177,78 @@
   177  history 
   178  ls
   179  history > Docker_Day2_Part-2.txt
+  180  git add . 
+  181  git commit -m "Docker_Day2_Part-2.txt"
+  182  git push 
+  183  ls
+  184  cd 
+  185  ls
+  186  cd - 
+  187  ls
+  188  cd docker/
+  189  ls
+  190  pwd
+  191  docker run -it -v /root/kube-docker-4-cts/docker:/var/www/test05 ubuntu:16.04
+  192  ls
+  193  cd apache/
+  194  ls
+  195  docker run -it -v /root/kube-docker-4-cts/docker:/var/www/test05:ro ubuntu:16.04
+  196  docker volume ls 
+  197  docker volume inspect 3c247d817cdac627a5c1072f4567ce4855f2a4fc70420136560c723d1f569740
+  198  ls
+  199  cd
+  200  docker run -itd --name wwwdata -v /root/kube-docker-4-cts/docker:/var/www/test05:ro -v /tmp:/var/www/logs busybox /bin/bash
+  201  docker run -itd --name wwwdata01 -v /root/kube-docker-4-cts/docker:/var/www/test05:ro -v /tmp:/var/www/logs busybox /bin/sh
+  202  docker ps 
+  203  docker kill 4a51c0d55a5e
+  204  docker ps 
+  205  docker run -itd --name test01 --volumes-from wwwdata01 ubuntu /bin/bash
+  206  docker run -itd --name test02 --volumes-from wwwdata01 ubuntu:16.04 /bin/bash
+  207  docker run -itd --name test03 --volumes-from wwwdata01 ubuntu:16.04 /bin/bash
+  208  docker run -itd --name test04 --volumes-from wwwdata01 centos /bin/bash
+  209  docker run -itd --name test04 --volumes-from wwwdata01 busybox /bin/sh
+  210  docker run -itd --name test05 --volumes-from wwwdata01 busybox /bin/sh
+  211  docker ps 
+  212  docker volumes ld
+  213  docker volumes ls
+  214  docker volume ls
+  215  docker ps 
+  216  docker attach test05
+  217  ls
+  218  docker attach test04
+  219  ls
+  220  docker ps  
+  221  docker inspect test05
+  222  ls
+  223  cd /tmp/
+  224  s
+  225  ls
+  226  docker ps 
+  227  docker inspect wwwdata01
+  228  ls
+  229  history | grep -i wwwdata01
+  230  docker run -itd --name wwwdata02 -v /root/kube-docker-4-cts/docker:/var/www/test05:ro -v /tmp:/var/www/logs -v /var/www/amit busybox /bin/sh
+  231  docker ps 
+  232  docker volume ls 
+  233  docker volume inspect a99ced4337fb912fe68f7b7876c6ec4785a1415531d6cb0860f4c3645999ba0f
+  234  ls
+  235  docker volume ls 
+  236  docker volume create my-cts-vol
+  237  docker volume ls 
+  238  docker run -it --name devtest -v my-cts-vol:/app01 busybox /bin/sh
+  239  docker volume ls 
+  240  docker volume inspect my-cts-vol
+  241  cat /var/lib/docker/volumes/my-cts-vol/_data/Docker_Hello.txt 
+  242  ls
+  243  cd ..
+  244  cd - 
+  245  ls
+  246  docker ps 
+  247  docker attach test04
+  248  ls
+  249  cd 
+  250  ls
+  251  cd kube-docker-4-cts/
+  252  ls
+  253  history > Docker_Day2
+  254  history > Docker_Day2_Part-2.txt 
