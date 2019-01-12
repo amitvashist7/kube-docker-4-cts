@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nodehelloworld
+  name: nodehelloworld-01
   labels:
-    app: helloworld
+    app: helloworld-01
 spec:
   containers:
   - name: k8s-demo

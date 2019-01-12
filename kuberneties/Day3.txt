@@ -51,3 +51,56 @@
    51  mv Docker_Day* docker/
    52  ls
    53  history > kuberneties/Day3.txt
+   54  git add . 
+   55  git status 
+   56  git commit -m "First Kubernetis Pod Created"
+   57  git push 
+   58  kubectl get pods 
+   59  history 
+   60  kubectl get pods 
+   61  ls
+   62  cd kuberneties/
+   63  ls
+   64  cd first-app/
+   65  ls
+   66  cat helloworld.yml 
+   67  kubectl create -f helloworld.yml
+   68  vim helloworld.yml 
+   69  kubectl create -f helloworld.yml
+   70  kubectl get pods 
+   71  kubectl get pods -o wide
+   72  kubectl get nodes
+   73  kubectl get pods -o wide
+   74  ls
+   75  cd 
+   76  ls
+   77  kubectl get pods 
+   78  kubectl delete pod docker-get-started-54b595dcb8-5n2lt
+   79  kubectl get pods 
+   80  kubectl delete pod nodehelloworld nodehelloworld-01 
+   81  kubectl get pods 
+   82  ls
+   83  cp -rf kubernetes-project/replication-controller kube-docker-4-cts/kuberneties/
+   84  cd kube-docker-4-cts/kuberneties/
+   85  ls
+   86  cd replication-controller/
+   87  ls
+   88  cat helloworld-repl-controller.yml 
+   89  kubectl create -f helloworld-repl-controller.yml 
+   90  kubectl get pods 
+   91  kubectl get pods -o wide 
+   92  kubectl get pods 
+   93  kubectl get rc
+   94  kubectl delete pod helloworld-controller-7t9kb
+   95  kubectl get pods 
+   96  kubectl get rc
+   97  kubectl edit rc helloworld-controller
+   98  kubectl get pods 
+   99  kubectl get pods -o wide 
+  100  kubectl get pods 
+  101  kubectl edit rc helloworld-controller
+  102  kubectl get pods 
+  103  ls
+  104  cd ../../
+  105  ls
+  106  history > kuberneties/Day3.txt 
