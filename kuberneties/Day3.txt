@@ -210,3 +210,63 @@
   210  kubectl get deployment helloworld-deployment 
   211  kubectl get pods 
   212  history > kuberneties/Day3.txt 
+  213  git add . 
+  214  git commit -m "Example: Rollout & Undo Deployments"
+  215  git push 
+  216  ls
+  217  kubectl get deployments
+  218  ls
+  219  kubectl  get svc 
+  220  kubectl delete svc helloworld-deployment
+  221  kubectl  get svc 
+  222  kubectl delete deployments helloworld-deployment
+  223  kubectl  get deployments 
+  224  kubectl  get pod
+  225  ls
+  226  cd kuberneties/
+  227  ls
+  228  cd first-app/
+  229  ls
+  230  cat helloworld.yml 
+  231  kubectl create -f helloworld.yml 
+  232  ls
+  233  cat helloworld-nodeport-service.yml
+  234  kubectl create -f helloworld-nodeport-service.yml 
+  235  kubectl get pods 
+  236  kubectl get pods -o wide 
+  237  kubectl get svc 
+  238  curl 172.31.0.112:31001
+  239  kubectl get pods -o wide 
+  240  kubectl get svc 
+  241  curl 172.31.0.112:31001
+  242  curl 172.31.0.111:31001
+  243  ls
+  244  cat helloworld-service.yml 
+  245  curl 172.31.0.111:31001
+  246  curl 172.31.0.112:31001
+  247  ls
+  248  kubectl get svc 
+  249  curl 10.105.66.159:31001
+  250  ls
+  251  kubectl get pods 
+  252  kubectl get svc 
+  253  kubectl describe svc helloworld-service
+  254  ls
+  255  vim helloworld.yml 
+  256  kubectl create -f helloworld.yml 
+  257  kubectl get pod
+  258  kubectl get pod -o wide 
+  259  kubectl describe svc helloworld-service
+  260  curl 172.31.0.112:31001
+  261  ls
+  262  vim helloworld.yml 
+  263  kubectl create -f helloworld.yml 
+  264  kubectl describe svc helloworld-service
+  265  curl 172.31.0.112:31001
+  266  curl 172.31.0.111:31001
+  267  kubectl describe svc helloworld-service
+  268  curl 10.105.66.159:31001
+  269  ls
+  270  curl 10.105.66.159:31001
+  271  ls
+  272  history > ../Day3.txt 
