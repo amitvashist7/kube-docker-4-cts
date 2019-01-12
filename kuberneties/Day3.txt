@@ -104,3 +104,58 @@
   104  cd ../../
   105  ls
   106  history > kuberneties/Day3.txt 
+  107  git add . 
+  108  git commit -m "Example: Replication Cantroller"
+  109  git push 
+  110  kubectl get rc 
+  111  kubectl descibe rc helloworld-controller
+  112  kubectl describe rc helloworld-controller
+  113  ls
+  114  kubectl get pods 
+  115  kubectl describe pod helloworld-controller-6jwnx
+  116  ls
+  117  kubectl delete rc helloworld-controller
+  118  kubectl get rc 
+  119  kubectl get pods 
+  120  ls
+  121  cp -rf ../kubernetes-project/deployment kuberneties/
+  122  cd kuberneties/deployment/
+  123  ls
+  124  cat helloworld.yml 
+  125  kubectl create -f helloworld.yml 
+  126  kubectl get deployments 
+  127  kubectl delete deployments docker-get-started
+  128  kubectl get deployments 
+  129  kubectl get pods 
+  130  kubectl get pods -o wide
+  131  kubectl get rc 
+  132  kubectl get rs
+  133  kubectl get pods -o wide
+  134  kubectl get pods 
+  135  kubectl get pods --show-lables
+  136  kubectl get pods --show-labels
+  137  kubectl get deployment
+  138  kubectl edit deployment helloworld-deployment
+  139  kubectl get pods --show-labels
+  140  kubectl get pods 
+  141  kubectl get pods --show-labels
+  142  kubectl rollout status deployment helloworld-deployment
+  143  kubectl edit deployment helloworld-deployment
+  144  kubectl rollout status deployment helloworld-deployment
+  145  kubectl get pods 
+  146  ls
+  147  cat helloworld.yml 
+  148  ls
+  149  cp -rf helloworld.yml helloworld-v3.yaml
+  150  vim helloworld-v3.yaml 
+  151  kubectl apply -f helloworld-v3.yaml 
+  152  kubectl rollout status deployment helloworld-deployment
+  153  kubectl get pods --show-labels
+  154  kubectl edit deployment helloworld-deployment
+  155  cd ..
+  156  ls
+  157  cd ../../
+  158  ls
+  159  cd kube-docker-4-cts/
+  160  ls
+  161  history > kuberneties/Day3.txt 
