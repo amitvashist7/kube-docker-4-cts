@@ -159,3 +159,54 @@
   159  cd kube-docker-4-cts/
   160  ls
   161  history > kuberneties/Day3.txt 
+  162  git add . 
+  163  git commit -m "Example: Deployment with Rolling Updates"
+  164  git push 
+  165  ls
+  166  cat kuberneties/deployment/helloworld.yml 
+  167  ls
+  168  kubectl  get deployments 
+  169  kubectl expose deployments helloworld-deployment --type=NodePort
+  170  kubectl get svc 
+  171  curl 172.31.0.111:30278
+  172  kubectl get pod -o wide 
+  173  curl 172.31.0.111:30278
+  174  curl 172.31.0.112:30278
+  175  kubectl rollout history deployment helloworld-deployment
+  176  kubectl rollout history deployment helloworld-deployment --revision=3
+  177  kubectl rollout history deployment helloworld-deployment --revision=2
+  178  kubectl rollout history deployment helloworld-deployment --revision=1
+  179  kubectl rollout history deployment helloworld-deployment
+  180  curl 172.31.0.112:30278
+  181  kubectl undo deployment helloworld-deployment
+  182  kubectl rollout undo deployment helloworld-deployment
+  183  kubectl rollout history deployment helloworld-deployment
+  184  kubectl rollout history deployment helloworld-deployment --revsion=4
+  185  kubectl rollout history deployment helloworld-deployment --revision=4
+  186  kubectl get pods 
+  187  curl 172.31.0.112:30278
+  188  kubectl rollout undo deployment helloworld-deployment
+  189  kubectl rollout history deployment helloworld-deployment
+  190  kubectl rollout undo deployment helloworld-deployment --to-revsion=1
+  191  kubectl rollout undo deployment helloworld-deployment --to-revision=1
+  192  kubectl rollout history deployment helloworld-deployment
+  193  curl 172.31.0.112:30278
+  194  kubectl rollout history deployment helloworld-deployment
+  195  kubectl rollout undo deployment helloworld-deployment --to-revision=4
+  196  curl 172.31.0.112:30278
+  197  curl 172.31.0.111:30278
+  198  curl 172.31.0.112:30278
+  199  kubectl rollout undo deployment helloworld-deployment --to-revision=5
+  200  curl 172.31.0.112:30278
+  201  curl 172.31.0.112:30278ls
+  202  ls
+  203  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:4
+  204  kubectl rollout history deployment helloworld-deployment
+  205  curl 172.31.0.112:30278ls
+  206  curl 172.31.0.112:30278
+  207  kubectl get svc 
+  208  kubectl scale --replicas=5 deployment helloworld-deployment k
+  209  kubectl scale --replicas=5 deployment helloworld-deployment 
+  210  kubectl get deployment helloworld-deployment 
+  211  kubectl get pods 
+  212  history > kuberneties/Day3.txt 
