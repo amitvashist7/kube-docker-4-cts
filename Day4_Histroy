@@ -599,3 +599,188 @@
   115  ls
   116  history 
   117  history >> Day4_Histroy 
+    1  kubectl get deployments 
+    2  kubectl delete deployments helloworld-deployment helloworld-deployment-2 helloworld-deployment-3
+    3  kubectl get nodes --show-labels
+    4  ls
+    5  cd kuberneties/
+    6  ls
+    7  kubectl get nodes --show-labels
+    8  ls
+    9  vim deployment/helloworld-healthcheck.yml 
+   10  kubectl get deployments 
+   11  kubectl create -f deployment/helloworld-healthcheck.yml 
+   12  kubectl get deployments 
+   13  kubectl get deployments -o wide 
+   14  kubectl get pods 
+   15  kubectl get pod helloworld-deployment-7c6f554f6d-8m2hw
+   16  kubectl describe pod helloworld-deployment-7c6f554f6d-8m2hw
+   17  kubectl get pods 
+   18  kubectl get deployments 
+   19  kubectl edit deployment helloworld-deployment
+   20  kubectl get pods 
+   21  kubectl describe pod helloworld-deployment-94c98ff7c-pqctm
+   22  kubectl get pods 
+   23  kubectl edit deployment helloworld-deployment
+   24  kubectl get pods 
+   25  kubectl describe pod helloworld-deployment-7c6f554f6d-d77ft | grep -i live 
+   26  ls
+   27  cd ..
+   28  ls
+   29  history >> Day4_Histroy 
+   30  git add . 
+   31  git commit -m "Liveness Probe"
+   32  git push 
+   33  kubectl get deployments 
+   34  kubectl delete deployments  helloworld-deployment
+   35  kubectl get deployments 
+   36  ls
+   37  echo -n 'root' | base64
+   38  echo -n 'password' | base64
+   39  ls
+   40  cd kuberneties/
+   41  ls
+   42  vim deployment/helloworld-secrets.yml 
+   43  cat deployment/helloworld-secrets.yml
+   44  echo -n 'password' | base64
+   45  echo -n 'root' | base64
+   46  kubectl get secrets 
+   47  kubectl create -f deployment/helloworld-secrets.yml 
+   48  kubectl get secrets 
+   49  ls
+   50  cat deployment/helloworld-secrets-volumes.yml 
+   51  kubectl create -f  deployment/helloworld-secrets-volumes.yml 
+   52  kubectl  get pods 
+   53  kubectl describe pod helloworld-deployment-57595c948-5td7w | grep -i SecretName
+   54  kubectl describe pod helloworld-deployment-57595c948-5td7w | egrep -A2 Mounts
+   55  kubectl exec -i -t helloworld-deployment-57595c948-5td7w -- /bin/sh
+   56  kubectl  get pods -o wide 
+   57  vim /etc/hosts
+   58  kubectl exec -i -t helloworld-deployment-57595c948-5td7w -- /bin/sh
+   59  ping node01
+   60  kubectl  get pods -o wide 
+   61  kubectl exec -i -t helloworld-deployment-57595c948-w4h8l -- /bin/sh
+   62  ls
+   63  cat /etc/hosts
+   64  vi /etc/hosts
+   65  ls
+   66  kubectl exec -i -t helloworld-deployment-57595c948-w4h8l -- /bin/sh
+   67  kubectl describe pod helloworld-deployment-57595c948-5td7w | egrep -A2 Mounts
+   68  kubectl  get pods -o wide 
+   69  kubectl exec -i -t helloworld-deployment-57595c948-w4h8l -- /bin/sh
+   70  ls
+   71  hostname
+   72  ip addr
+   73  cat /etc/hosts
+   74  cat deployment/helloworld-secrets.yml 
+   75  cat deployment/helloworld-secrets-volumes.yml 
+   76  ls
+   77  cp -rf /root/kubernetes-project/wordpress . 
+   78  ls
+   79  cd wordpress/
+   80  ls
+   81  cat wordpress-secrets.yml 
+   82  cat wordpress-single-deployment-no-volumes.yml 
+   83  ls
+   84  cat wordpress-service.yml 
+   85  ls
+   86  kubectl get svc 
+   87  kubectl delete svc helloworld-service
+   88  ls
+   89  cd ..
+   90  ls
+   91  kubectl create -f wordpress/
+   92  kubectl get pods 
+   93  ls
+   94  cd ..
+   95  ls
+   96  history >> Day4_Histroy 
+   97  git add . 
+   98  git commit -m "Wordpress No-Volume Exampled"
+   99  git push 
+  100  kubectl get ns 
+  101  kubectl delete ns istio-system
+  102  kubectl get pods 
+  103  kubectl get pods -n kube-system
+  104  kubectl get pods -n kube-system -o wide 
+  105  kubectl get pods 
+  106  kubectl describe pod wordpress-deployment-6958b7b48f-jhjl4
+  107  kubectl describe pod wordpress-deployment-6958b7b48f-jhjl4 | grep -i password
+  108  kubectl get svc 
+  109  kubectl get pods -o wide 
+  110  kubectl exec -i -t wordpress-deployment-6958b7b48f-jhjl4 -C mysql -- /bin/sh
+  111  kubectl exec -i -t wordpress-deployment-6958b7b48f-jhjl4 -c mysql -- /bin/sh
+  112  kubectl exec -i -t wordpress-deployment-6958b7b48f-jhjl4 -c mysql -- mysql -u root -p 
+  113  kubectl exec -i -t wordpress-deployment-6958b7b48f-jhjl4 -c mysql -- /bin/bash
+  114  kubectl exec -i -t wordpress-deployment-6958b7b48f-jhjl4 -c mysql -- /bin/sh
+  115  ls
+  116  history 
+  117  history >> Day4_Histroy 
+  118  git add . 
+  119  git commit -m "Wordpress Deployment Check"
+  120  git push 
+  121  s
+  122  ls
+  123  cat kuberneties/wordpress/wordpress-service.yml 
+  124  cat kuberneties/wordpress/wordpress-single-deployment-no-volumes.yml 
+  125  ls
+  126  cat kuberneties/wordpress/wordpress-secrets.yml 
+  127  kubectl get secreats 
+  128  kubectl get secrets
+  129  kubectl describe secrets db-secrets
+  130  kubectl describe secrets wordpress-secrets
+  131  kubectl get secrets
+  132  kubectl describe secrets default-token-hxbp8
+  133  kubectl get secrets
+  134  kubectl get deploymenst 
+  135  kubectl get deployments
+  136  kubectl delete deployments helloworld-deployment wordpress-deployment
+  137  kubectl get svc 
+  138  kubectl delete svc wordpress-service
+  139  ls
+  140  kubectl get ns 
+  141  kubectl get pod -n kube-system
+  142  kubectl get pod -n kube-system -o wide 
+  143  kubectl get svc  -n kube-system  
+  144  ls
+  145  cp -rf ../kubernetes-project/service-discovery kuberneties/
+  146  ls
+  147  cd kuberneties/
+  148  ls
+  149  cd  service-discovery/
+  150  ls
+  151  cat secrets.yml 
+  152  ls
+  153  cat database.yml 
+  154  ls
+  155  cat database-service.yml
+  156  ls
+  157  cat helloworld-db.yml 
+  158  ls
+  159  cd ..
+  160  ls
+  161  kubectl create -f service-discovery/
+  162  kubectl get pods 
+  163  ls
+  164  kubectl get pods 
+  165  kubectl descibe pod helloworld-deployment-88db598f6-2zmr7
+  166  kubectl describe pod helloworld-deployment-88db598f6-2zmr7
+  167  kubectl get pods 
+  168  kubectl get svc 
+  169  curl 172.31.0.111:32208
+  170  curl 172.31.0.112:32208
+  171  kubectl get svc 
+  172  curl 10.109.39.152:3000
+  173  ls
+  174  kubectl get pods 
+  175  kubectl exec -i -t database  -- mysql -u root -p 
+  176  kubectl exec -i -t database  -- /bin/bash
+  177  kubectl run -i --tty busybox --image=busybox --restart=Never -- sh 
+  178  kubectl get svc 
+  179  kubectl get pods 
+  180  ls
+  181  git add . 
+  182  git commit -m "Service Discovery"
+  183  git push 
+  184  ls
+  185  history >> ../Day4_Histroy 
