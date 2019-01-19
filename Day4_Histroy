@@ -357,3 +357,32 @@
   646  ls
   647  history 
   648  history > Day4_Histroy
+    1  kubectl get deployments 
+    2  kubectl delete deployments helloworld-deployment helloworld-deployment-2 helloworld-deployment-3
+    3  kubectl get nodes --show-labels
+    4  ls
+    5  cd kuberneties/
+    6  ls
+    7  kubectl get nodes --show-labels
+    8  ls
+    9  vim deployment/helloworld-healthcheck.yml 
+   10  kubectl get deployments 
+   11  kubectl create -f deployment/helloworld-healthcheck.yml 
+   12  kubectl get deployments 
+   13  kubectl get deployments -o wide 
+   14  kubectl get pods 
+   15  kubectl get pod helloworld-deployment-7c6f554f6d-8m2hw
+   16  kubectl describe pod helloworld-deployment-7c6f554f6d-8m2hw
+   17  kubectl get pods 
+   18  kubectl get deployments 
+   19  kubectl edit deployment helloworld-deployment
+   20  kubectl get pods 
+   21  kubectl describe pod helloworld-deployment-94c98ff7c-pqctm
+   22  kubectl get pods 
+   23  kubectl edit deployment helloworld-deployment
+   24  kubectl get pods 
+   25  kubectl describe pod helloworld-deployment-7c6f554f6d-d77ft | grep -i live 
+   26  ls
+   27  cd ..
+   28  ls
+   29  history >> Day4_Histroy 
